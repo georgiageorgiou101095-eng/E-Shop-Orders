@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <title>E-Shop Orders Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="dashboard">
+    <section class="controls">
+      <h1>E-Shop Orders</h1>
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="Αναζήτηση σε ID ή πελάτη..." />
+        <select id="statusFilter">
+          <option value="">Όλα τα status</option>
+          <option value="Pending">Pending</option>
+          <option value="Shipped">Shipped</option>
+          <option value="Cancelled">Cancelled</option>
+        </select>
+      </div>
+      <div class="summary">
+        <span id="ordersCount">0 orders</span>
+        <span id="ordersTotal">Total: €0.00</span>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Ημερομηνία</th>
+              <th>Πελάτης</th>
+              <th>Status</th>
+              <th>Total (€)</th>
+            </tr>
+          </thead>
+          <tbody id="ordersTableBody">
+            <!-- rows from JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="details" id="orderDetails">
+        <h2>Λεπτομέρειες παραγγελίας</h2>
+        <p>Επέλεξε μία παραγγελία από τον πίνακα.</p>
+      </aside>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
